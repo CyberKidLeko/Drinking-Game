@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinking Game</title>
-    
-    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="./src/styles.css">
+
 </head>
 <body>
-    <div id="root"></div>
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <h1>Welcome to the Drinking Game</h1>
+        <button id="start-btn">Start Game</button>
+    </div>
 
-    <!-- React and ReactDOM CDN -->
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- Game Mode Selection -->
+    <div id="mode-selection" class="hidden">
+        <h2>Select a Game Mode</h2>
+        <button class="mode-btn" id="friends-mode">Friends</button>
+        <button class="mode-btn" id="adults-mode">18+ Friends</button>
+        <button class="mode-btn" id="couples-mode">Couples</button>
+    </div>
 
-    <!-- Babel CDN to transpile JSX -->
-    <script src="https://unpkg.com/@babel/standalone"></script>
+    <!-- Game Play Screen -->
+    <div id="game-screen" class="hidden">
+        <h2 id="game-title"></h2>
+        <p id="prompt-text">Click "Next" to begin!</p>
+        <button id="next-btn">Next</button>
+    </div>
 
-    
-    <script type="text/babel" src="script.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
